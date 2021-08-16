@@ -1,9 +1,10 @@
 import React from 'react';
+import JobsContainer from './JobsContainer'
 
 const App = () => {
     return (
         <div>
-            Hello World
+            <JobsContainer />
         </div>
     );
 };
