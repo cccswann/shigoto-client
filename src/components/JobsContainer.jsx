@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
-import { fetchJob } from '../actions/jobsActions'
+import { fetchJobs } from '../actions/jobsActions'
 import JobsList from './JobsList'
 
 
 class JobsContainer extends Component {
     state={fetched:false}
     componentDidMount() {
-        this.props.fetchJob()
+        this.props.fetchJobs()
         this.setState({fetched:true})
     }
 
@@ -25,4 +25,4 @@ const mapStateToProps = (state) => {
     return { jobs: state.jobs }
 }
 
-export default connect(mapStateToProps,{ fetchJob })(JobsContainer);
+export default connect(mapStateToProps,{ fetchJobs })(JobsContainer);
