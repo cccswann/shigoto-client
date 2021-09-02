@@ -1,4 +1,6 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom'
+import SessionLink from './SessionLink';
 import {
   Nav,
   NavLink,
@@ -9,6 +11,7 @@ import {
 } from './NavElements';
 
 const Navbar = () => {
+  const location = useLocation()
   return (
     <>
       <Nav>
@@ -17,20 +20,19 @@ const Navbar = () => {
         </NavLink>
         <Bars />
         <NavMenu>
-          <NavLink to='/about' activeStyle>
-            About
+          <NavLink to='/' activeStyle>
+            Home
           </NavLink>
           <NavLink to='/jobs' activeStyle>
             Jobs
           </NavLink>
-          <NavLink to='/jobs-form' activeStyle>
-            Add Job
-          </NavLink>
-          <NavLink to='/sign-up' activeStyle>
-            Sign Up
+          <NavLink to='/chart' activeStyle>
+            Chart
           </NavLink>
           {/* Second Nav */}
-          <NavBtnLink to='/sign-in'>Sign In</NavBtnLink>
+          <NavBtn>
+            <NavBtnLink to='/jobs-form'>Add Job</NavBtnLink>
+          </NavBtn>
         </NavMenu>
         {/* <NavBtn>
           <NavBtnLink to='/signin'>Sign In</NavBtnLink>

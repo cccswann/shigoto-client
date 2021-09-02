@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import styled from "styled-components";
+import styled from "styled-components"
 
 import { addJob } from '../actions/jobsActions'
+import ParticleBack from './Particles';
 
 const Styles = styled.div`
  padding: 20px;
@@ -86,6 +87,7 @@ class JobsForm extends Component {
     handleSubmit = e => {
         e.preventDefault()
         this.props.addJob(this.state)
+        this.props.history.push('/jobs')
     }
 
     render() {
@@ -118,6 +120,7 @@ class JobsForm extends Component {
 
                     <input type="submit" value="Create Job" className="submitButton"/>
                 </form>
+                <ParticleBack/>
             </Styles>
         );
     }
