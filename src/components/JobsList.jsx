@@ -1,17 +1,17 @@
 import React from 'react';
 import { connect } from 'react-redux'
+import JobItem from './JobItem';
+
 
 const JobsList = ({ jobs }) => {
     return (
         <div>
-            <h1>Jobs List:</h1>
-            {jobs.map(job => 
-                <ul key={job.id}>
-                    <li >
-                        {job.title}
-                    </li>
+            <h3>Jobs List:</h3>
+            {jobs.jobs.map(job => 
+                <ul key={job.id} className='list-group'>
+                    <JobItem id={job.id} title={job.title} company={job.company} status={job.status}/>
                 </ul>
-        )}
+            )}
         </div>
     );
 };
