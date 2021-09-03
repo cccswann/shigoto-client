@@ -17,6 +17,7 @@ export const Nav = styled.nav`
 export const NavLink = styled(Link)`
   color: #fff;
   display: flex;
+  font-size: 1.35rem;
   align-items: center;
   text-decoration: none;
   padding: 0 1rem;
@@ -69,12 +70,13 @@ export const NavBtn = styled.nav`
 
 export const NavBtnLink = styled(Link)`
   border-radius: 4px;
-  background: #256ce1;
+  background: rgb(18, 160, 196);
   padding: 10px 22px;
   color: #fff;
   outline: none;
   border: none;
   cursor: pointer;
+  font-size: 1.2rem;
   transition: all 0.2s ease-in-out;
   text-decoration: none;
   /* Second Nav */
