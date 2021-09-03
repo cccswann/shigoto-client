@@ -16,7 +16,7 @@ const Navbar = () => {
     <>
       <Nav>
         <NavLink to='/'>
-          <h1>Shigoto</h1>
+          <h1 style={{fontSize:'3rem', fontWeight: '900'}}>Shigoto</h1>
         </NavLink>
         <Bars />
         <NavMenu>
