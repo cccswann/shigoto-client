@@ -1,7 +1,5 @@
 import React from "react";
 import Chart from "react-google-charts";
-import { withTheme } from "styled-components";
-
 
 
 const JobChart = ({ jobs }) => {
@@ -32,24 +30,11 @@ const JobChart = ({ jobs }) => {
     var colors = ['#a6cee3', '#b2df8a', '#fb9a99', '#fdbf6f',
     '#cab2d6', '#ffff99', '#1f78b4', '#33a02c'];
 
-    var options = {
-        height: 400,
-        sankey: {
-            node: {
-                colors: colors
-            },
-            link: {
-                colorMode: 'gradient',
-                colors: colors
-            }
-        }
-    };
-
     return (
 		<div style={{marginTop: '2rem'}}>
 			<Chart
             width={'100%'}
-            height={'500px'}
+            height={'450px'}
             chartType="Sankey"
             loader={<div>Loading Chart</div>}
             options={{
