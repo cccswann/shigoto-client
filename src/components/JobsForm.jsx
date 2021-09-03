@@ -110,7 +110,7 @@ class JobsForm extends Component {
 
                     <label>Status</label>
                     <select value={this.state.status} onChange={this.handleChange} name="status">
-                        <option value="Want">Want to Apply</option>
+                        <option value=" "></option>
                         <option value="Applied">Applied</option>
                         <option value="Interview">Interview</option>
                         <option value="Rejected">Rejected</option>
